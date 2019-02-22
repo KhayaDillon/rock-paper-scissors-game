@@ -20,8 +20,26 @@ function gameListeners() {
 
 gameListeners()
 
-function game() {
-	let compPlayerHandsign = generateHandsign()
+function game(userPlayer) {
+	let compPlayer = generateHandsign()
+	
+	switch (`${userPlayer} vs ${compPlayer}`) {
+		case "rock vs rock":
+		case "paper vs paper":
+		case "scissors vs scissors":
+			tie();
+			break;
+		case "rock vs scissors":
+		case "paper vs rock":
+		case "scissors vs paper":
+			win();
+			break;
+		case "rock vs paper":
+		case "paper vs scissors":
+		case "scissors vs rock":
+			lose();
+			break;
+	}
 
 }
 

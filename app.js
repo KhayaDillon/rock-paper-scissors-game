@@ -6,17 +6,27 @@ const scissors = document.getElementById("scissors")
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		alert("Test")
+		game("rock")
 	})
 	
 	paper.addEventListener("click", function() {
-		alert("Test")
+		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
-		alert("Test")
+		game("scissors")
 	})
 }
 
 gameListeners()
 
+function game() {
+	let compPlayerHandsign = generateHandsign()
+
+}
+
+function generateHandsign() {
+	const handsigns = ["rock", "paper", "scissors"]
+	let randomIndex = Math.floor(Math.random() * 3)
+	return handsigns[randomIndex]
+}

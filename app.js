@@ -6,15 +6,15 @@ const outcomeText = document.getElementById("outcomeText")
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		game("rock")
+		game("Rock")
 	})
 	
 	paper.addEventListener("click", function() {
-		game("paper")
+		game("Paper")
 	})
 	
 	scissors.addEventListener("click", function() {
-		game("scissors")
+		game("Scissors")
 	})
 }
 
@@ -24,19 +24,19 @@ function game(userPlayer) {
 	let compPlayer = generateHandsign()
 	
 	switch (`${userPlayer} vs ${compPlayer}`) {
-		case "rock vs rock":
-		case "paper vs paper":
-		case "scissors vs scissors":
+		case "Rock vs Rock":
+		case "Paper vs Paper":
+		case "Scissors vs Scissors":
 			tie(compPlayer);
 			break;
-		case "rock vs scissors":
-		case "paper vs rock":
-		case "scissors vs paper":
+		case "Rock vs Scissors":
+		case "Paper vs Rock":
+		case "Scissors vs Paper":
 			win(userPlayer, compPlayer);
 			break;
-		case "rock vs paper":
-		case "paper vs scissors":
-		case "scissors vs rock":
+		case "Rock vs Paper":
+		case "Paper vs Scissors":
+		case "Scissors vs Rock":
 			lose(userPlayer, compPlayer);
 			break;
 	}
@@ -44,23 +44,23 @@ function game(userPlayer) {
 }
 
 function generateHandsign() {
-	const handsigns = ["rock", "paper", "scissors"]
+	const handsigns = ["Rock", "Paper", "Scissors"]
 	let randomIndex = Math.floor(Math.random() * 3)
 	return handsigns[randomIndex]
 }
 
-function tie(compPlayer) {
-	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
+function tie(compHandsign) {
+	outcomeText.innerHTML = `Computer Player chose ${compHandsign}. It's a tie!`
 }
 
-function win(userPlayer, compPlayer) {
-	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
+function win(userHandsign, compHandsign) {
+	outcomeText.innerHTML = `${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`
 }
 
-function lose(userPlayer, compPlayer) {
-	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
+function lose(userHandsign, compHandsign) {
+	outcomeText.innerHTML = `${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`
 }
 
-function gameVerb(winner) {
-	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cuts"
+function attackVerb(winner) {
+	return winner === "Rock" ? "smashes" : winner === "Paper" ? "covers" : "cuts"
 }

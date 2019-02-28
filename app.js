@@ -52,3 +52,15 @@ function generateHandsign() {
 function tie(compPlayer) {
 	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
 }
+
+function win(userPlayer, compPlayer) {
+	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
+}
+
+function lose(userPlayer, compPlayer) {
+	outcomeText.innerHTML = `Computer Player chose ${compPlayer}. It's a tie!`
+}
+
+function gameVerb(winner) {
+	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cuts"
+}

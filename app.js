@@ -2,7 +2,8 @@
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
-const outcomeText = document.getElementById("outcome-text")
+const compOutcomeText = document.getElementById("comp-outcome-text")
+const gameOutcomeText = document.getElementById("game-outcome-text")
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
@@ -23,11 +24,13 @@ gameListeners()
 function game(userPlayer) {
 	let compPlayer = generateHandsign()
 	
+	compOutcomeText.innerHTML = `Computer Player chose ${compPlayer}.`.toUpperCase()
+	
 	switch (`${userPlayer} vs ${compPlayer}`) {
 		case "rock vs rock":
 		case "paper vs paper":
 		case "scissors vs scissors":
-			tie(compPlayer);
+			tie();
 			break;
 		case "rock vs scissors":
 		case "paper vs rock":
@@ -48,16 +51,16 @@ function generateHandsign() {
 	return handsigns[randomIndex]
 }
 
-function tie(compHandsign) {
-	outcomeText.innerHTML = `Computer Player chose ${compHandsign}. It's a tie!`.toUpperCase()
+function tie() {
+	gameOutcomeText.innerHTML = "It's a tie!".toUpperCase()
 }
 
 function win(userHandsign, compHandsign) {
-	outcomeText.innerHTML = `${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase()
+	gameOutcomeText.innerHTML = `${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase()
 }
 
 function lose(userHandsign, compHandsign) {
-	outcomeText.innerHTML = `${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase()
+	gameOutcomeText.innerHTML = `${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase()
 }
 
 function attackVerb(winner) {

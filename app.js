@@ -4,6 +4,11 @@ const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
 const compOutcomeText = document.getElementById("comp-outcome-text")
 const gameOutcomeText = document.getElementById("game-outcome-text")
+const userScoreData = document.getElementById("user-score-data")
+const compScoreData = document.getElementById("comp-score-data")
+
+let userScore = 0 
+let compScore = 0
 
 function gameListeners() {
 	rock.addEventListener("click", function() {

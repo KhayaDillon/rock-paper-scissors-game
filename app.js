@@ -61,13 +61,17 @@ function tie() {
 }
 
 function win(userHandsign, compHandsign) {
+	userScore++
+	userScoreData.innerHTML = userScore
 	gameOutcomeText.innerHTML = `${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase()
 }
 
 function lose(userHandsign, compHandsign) {
+	compScore++
+	compScoreData.innerHTML = compScore
 	gameOutcomeText.innerHTML = `${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase()
 }
 
 function attackVerb(winner) {
-	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cuts"
+	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cut"
 }

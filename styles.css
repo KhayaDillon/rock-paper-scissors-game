@@ -1,9 +1,32 @@
 @charset "utf-8";
 
+body {
+	background-color: #BA0E0E;
+}
+
 header {
 	padding: 20px;
+	background-color: white;
 }
 
 header h1 {
 	text-align: center;
+	color: #BA0E0E;
+}
+
+div {
+	text-align: center;
+}
+
+table {
+	border: 3px solid black;
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+th, td {
+	border: 3px solid black;
 }

@@ -4,6 +4,11 @@ body {
 	background-color: #BA0E0E;
 }
 
+#logo {
+	width: 100px; 
+	margin: 0 auto;
+}
+
 header {
 	padding: 20px;
 	background-color: white;
@@ -11,7 +16,8 @@ header {
 
 header h1 {
 	text-align: center;
-	color: #BA0E0E;
+	color: black;
+	font-weight: bold;
 }
 
 div {

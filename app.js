@@ -10,26 +10,32 @@ const compScoreData = document.getElementById("comp-score-data")
 let userScore = 0 
 let compScore = 0
 
+gameListeners()
+
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		game("rock")
+		start()
+		setTimeout(function() {game("rock")}, 10000) //10 seconds
 	})
 	
 	paper.addEventListener("click", function() {
+		start()
 		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
+		start()
 		game("scissors")
 	})
 }
 
-gameListeners()
+function start() {
+	gameOutcomeText.innerHTML = "1"
+	//gameOutcome.style.transition = "color 1.5s ease-in, font-size 2s ease,"
+}
 
 function game(userPlayer) {
 	let compPlayer = generateHandsign()
-	
-	compOutcomeText.innerHTML = `Computer Player chose ${compPlayer}.`.toUpperCase()
 	
 	switch (`${userPlayer} vs ${compPlayer}`) {
 		case "rock vs rock":
@@ -53,6 +59,8 @@ function game(userPlayer) {
 function generateHandsign() {
 	const handsigns = ["rock", "paper", "scissors"]
 	let randomIndex = Math.floor(Math.random() * 3)
+	
+	compOutcomeText.innerHTML = `Computer Player chose ${handsigns[randomIndex]}.`.toUpperCase()
 	return handsigns[randomIndex]
 }
 

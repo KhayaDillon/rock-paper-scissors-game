@@ -2,6 +2,7 @@
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
+const countdownText = document.getElementById("countdown-text")
 const compOutcomeText = document.getElementById("comp-outcome-text")
 const gameOutcomeText = document.getElementById("game-outcome-text")
 const userScoreData = document.getElementById("user-score-data")
@@ -14,24 +15,26 @@ gameListeners()
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		start()
+		countdown()
 		setTimeout(function() {game("rock")}, 10000) //10 seconds
 	})
 	
 	paper.addEventListener("click", function() {
-		start()
+		countdown()
 		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
-		start()
+		countdown()
 		game("scissors")
 	})
 }
 
-function start() {
-	gameOutcomeText.innerHTML = "1"
-	//gameOutcome.style.transition = "color 1.5s ease-in, font-size 2s ease,"
+function countdown() {
+	countdownText.innerHTML = "1"
+	countdownText.style.transition = "font-size 1s ease, color 2s ease"
+	countdownText.style.fontSize = "4em"
+	countdownText.style.color = "white"
 }
 
 function game(userPlayer) {

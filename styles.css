@@ -40,7 +40,11 @@ div {
 	color: white;
 	font-family: 'Permanent Marker', cursive;
 	font-size: 1.6em;
-	
+}
+
+#countdown-text {
+	color: #CE0303;
+	font-size: 1em;
 }
 
 table {

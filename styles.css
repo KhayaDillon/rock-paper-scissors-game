@@ -32,10 +32,21 @@ div {
 	text-align: center;
 }
 
+.handsign {
+	margin: 20px;
+}
+
+#outcomes h3 {
+	color: white;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.6em;
+	
+}
+
 table {
 	border: 3px solid black;
 	width: 200px;
-	margin: 0 auto;
+	margin: 20px auto;
 	text-align: center;
 	border-collapse: collapse;
 	background-color: white;

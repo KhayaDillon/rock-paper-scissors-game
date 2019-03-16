@@ -31,10 +31,25 @@ function gameListeners() {
 }
 
 function countdown() {
-	countdownText.innerHTML = "1"
-	countdownText.style.transition = "font-size 1s ease, color 2s ease"
-	countdownText.style.fontSize = "4em"
-	countdownText.style.color = "white"
+	var countdown = 3
+	let delay = 0
+	
+	do {
+		setTimeout(function() {
+			countdownText.style.padding = "20px"
+			countdownText.innerHTML = `${countdown}`
+			countdownText.style.transition = "font-size 1s ease, color 2s ease"
+			countdownText.style.fontSize = "4em"
+			countdownText.style.color = "white"	
+		},
+		delay)
+		
+		countdown--
+		delay = 3000
+		
+	} while (countdown > 0) 
+	
+	countdownText.innerHTML = "Fight!"
 }
 
 function game(userPlayer) {

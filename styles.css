@@ -45,6 +45,7 @@ div {
 #countdown-text {
 	color: #CE0303;
 	font-size: 1em;
+	padding: 10px;
 }
 
 table {

@@ -42,18 +42,14 @@ div {
 	font-size: 1.6em;
 }
 
-.countdownSet {
-	color: gray;
-	font-size: 1em;
-	padding: 10px;
-}
 
-.countdownStart {
+#countdown-text {
 	padding: 20px;
-	transition: font-size 1s ease, color 2s ease;
 	font-size: 4em;
 	color: white;
+	animation-duration: 3s;
 }
+
 
 table {
 	border: 3px solid black;

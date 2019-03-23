@@ -43,12 +43,19 @@ div {
 }
 
 
-#countdown-text {
-	padding: 20px;
-	font-size: 4em;
+.countdownStart {
+	padding: 35px;
+	font-size: 3em;
 	color: white;
 	animation-duration: 2s;
 	animation-iteration-count: 4;
+}
+
+.countdownEnd {
+	font-family: 'Permanent Marker', cursive;
+	padding: 20px;
+	font-size: 3.5em;
+	color: white;
 }
 
 

@@ -32,14 +32,16 @@ function gameListeners() {
 
 
 function countdown() {		
-	countdownText.classList.add('animated', 'zoomInDown')
+	countdownText.classList.add('animated', 'zoomInDown', 'countdownStart')
 	countdownText.innerHTML = "Ready?"
 	
 	countdownText.addEventListener('animationiteration', function() {
-		countdownText.innerHTML = `${event.elapsedTime/2}`
+		countdownText.innerHTML = `${event.elapsedTime}`
 	})
 	
 	countdownText.addEventListener('animationend', function() {
+		countdownText.classList.remove('animated', 'zoomInDown', 'countdownStart')
+		countdownText.classList.add('animated', 'heartBeat', 'countdownEnd')
 		countdownText.innerHTML = 'FIGHT!'
 	})
 	

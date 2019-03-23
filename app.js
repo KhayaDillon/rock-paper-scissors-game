@@ -27,22 +27,22 @@ function gameListeners() {
 	scissors.addEventListener("click", function() {
 		countdown()
 		game("scissors")
-	})
+	})	
 }
 
-function countdown() {	
-	let count = 3
-	
-	countdownText.addEventListener('animationIteration', function() {
-		if (count > 0) {
-			countdownText.innerHTML = `#{count}`
-			count--	
-		} else {
-			countdownText.innerHTML = 'FIGHT!'
-		}
-	})	
-	
+
+function countdown() {		
 	countdownText.classList.add('animated', 'zoomInDown')
+	countdownText.innerHTML = "Ready?"
+	
+	countdownText.addEventListener('animationiteration', function() {
+		countdownText.innerHTML = `${event.elapsedTime/2}`
+	})
+	
+	countdownText.addEventListener('animationend', function() {
+		countdownText.innerHTML = 'FIGHT!'
+	})
+	
 }
 
 function game(userPlayer) {

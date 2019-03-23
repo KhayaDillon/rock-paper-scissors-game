@@ -32,7 +32,8 @@ function gameListeners() {
 
 
 function countdown() {		
-	countdownText.classList.add('animated', 'zoomInDown', 'countdownStart')
+	countdownText.classList.remove('animated', 'heartBeat', 'countdown-end')
+	countdownText.classList.add('animated', 'zoomInDown', 'countdown-start')
 	countdownText.innerHTML = "Ready?"
 	
 	countdownText.addEventListener('animationiteration', function() {
@@ -40,8 +41,8 @@ function countdown() {
 	})
 	
 	countdownText.addEventListener('animationend', function() {
-		countdownText.classList.remove('animated', 'zoomInDown', 'countdownStart')
-		countdownText.classList.add('animated', 'heartBeat', 'countdownEnd')
+		countdownText.classList.remove('animated', 'zoomInDown', 'countdown-start')
+		countdownText.classList.add('animated', 'heartBeat', 'countdown-end')
 		countdownText.innerHTML = 'FIGHT!'
 	})
 	

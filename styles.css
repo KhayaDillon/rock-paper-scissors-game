@@ -43,7 +43,7 @@ div {
 }
 
 
-.countdownStart {
+.countdown-start {
 	padding: 35px;
 	font-size: 3em;
 	color: white;
@@ -51,7 +51,7 @@ div {
 	animation-iteration-count: 4;
 }
 
-.countdownEnd {
+.countdown-start {
 	font-family: 'Permanent Marker', cursive;
 	padding: 20px;
 	font-size: 3.5em;

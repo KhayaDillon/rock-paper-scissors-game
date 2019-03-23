@@ -30,26 +30,18 @@ function gameListeners() {
 	})
 }
 
-function countdown() {
-	var countdown = 3
-	let delay = 0
+function countdown() {	
 	
-	do {
-		setTimeout(function() {
-			countdownText.style.padding = "20px"
-			countdownText.innerHTML = `${countdown}`
-			countdownText.style.transition = "font-size 1s ease, color 2s ease"
-			countdownText.style.fontSize = "4em"
-			countdownText.style.color = "white"	
-		},
-		delay)
-		
-		countdown--
-		delay = 3000
-		
-	} while (countdown > 0) 
-	
-	countdownText.innerHTML = "Fight!"
+	setTimeout(function() {numTransition(3)}, 0)
+	setTimeout(function() {numTransition(2)}, 2000)
+	setTimeout(function() {numTransition(1)}, 4000)
+	setTimeout(function() {numTransition("FIGHT!")}, 6000)
+}
+
+function numTransition(countdown) {
+	countdownText.className = "countdownSet"
+	countdownText.innerHTML = `${countdown}`
+	countdownText.className = "countdownStart"
 }
 
 function game(userPlayer) {

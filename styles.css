@@ -42,10 +42,17 @@ div {
 	font-size: 1.6em;
 }
 
-#countdown-text {
-	color: #CE0303;
+.countdownSet {
+	color: gray;
 	font-size: 1em;
 	padding: 10px;
+}
+
+.countdownStart {
+	padding: 20px;
+	transition: font-size 1s ease, color 2s ease;
+	font-size: 4em;
+	color: white;
 }
 
 table {

@@ -31,23 +31,19 @@ function gameListeners() {
 }
 
 function countdown() {	
-	countdownText.innerHTML = "1"
+	let count = 3
+	
+	countdownText.addEventListener('animationIteration', function() {
+		if (count > 0) {
+			countdownText.innerHTML = `#{count}`
+			count--	
+		} else {
+			countdownText.innerHTML = 'FIGHT!'
+		}
+	})	
+	
 	countdownText.classList.add('animated', 'zoomInDown')
-/*
-	setTimeout(function() {numTransition(3)}, 0)
-	setTimeout(function() {numTransition(2)}, 2000)
-	setTimeout(function() {numTransition(1)}, 4000)
-	setTimeout(function() {numTransition("FIGHT!")}, 6000)
-*/
 }
-
-/*
-function numTransition(countdown) {
-	countdownText.className = "countdownSet"
-	countdownText.innerHTML = `${countdown}`
-	countdownText.className = "countdownStart"
-}
-*/
 
 function game(userPlayer) {
 	let compPlayer = generateHandsign()

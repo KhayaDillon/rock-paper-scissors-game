@@ -47,7 +47,8 @@ div {
 	padding: 20px;
 	font-size: 4em;
 	color: white;
-	animation-duration: 3s;
+	animation-duration: 2s;
+	animation-iteration-count: 4;
 }
 
 

@@ -15,8 +15,7 @@ gameListeners()
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		countdown()
-		setTimeout(function() {game("rock")}, 10000) //10 seconds
+		game("rock")
 	})
 	
 	paper.addEventListener("click", function() {
@@ -40,17 +39,31 @@ function countdown() {
 		countdownText.innerHTML = `${event.elapsedTime}`
 	})
 	
+}
+
+function game(userPlayer) {
+	countdown()
+	
 	countdownText.addEventListener('animationend', function() {
 		countdownText.classList.remove('animated', 'zoomInDown', 'countdown-start')
 		countdownText.classList.add('animated', 'heartBeat', 'countdown-end')
 		countdownText.innerHTML = 'FIGHT!'
-	})
 	
+		let compPlayer = generateHandsign()
+		
+		checkWinner(userPlayer, compPlayer)
+	})	
 }
 
-function game(userPlayer) {
-	let compPlayer = generateHandsign()
+function generateHandsign() {
+	const handsigns = ["rock", "paper", "scissors"]
+	let randomIndex = Math.floor(Math.random() * 3)
 	
+	compOutcomeText.innerHTML = `Computer Player chose ${handsigns[randomIndex]}.`.toUpperCase()
+	return handsigns[randomIndex]
+}
+
+function checkWinner(userPlayer, compPlayer) {
 	switch (`${userPlayer} vs ${compPlayer}`) {
 		case "rock vs rock":
 		case "paper vs paper":
@@ -67,15 +80,7 @@ function game(userPlayer) {
 		case "scissors vs rock":
 			lose(userPlayer, compPlayer);
 			break;
-	}
-}
-
-function generateHandsign() {
-	const handsigns = ["rock", "paper", "scissors"]
-	let randomIndex = Math.floor(Math.random() * 3)
-	
-	compOutcomeText.innerHTML = `Computer Player chose ${handsigns[randomIndex]}.`.toUpperCase()
-	return handsigns[randomIndex]
+	}	
 }
 
 function tie() {

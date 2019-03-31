@@ -19,12 +19,10 @@ function gameListeners() {
 	})
 	
 	paper.addEventListener("click", function() {
-		countdown()
 		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
-		countdown()
 		game("scissors")
 	})	
 }
@@ -46,6 +44,9 @@ function game(userPlayer) {
 }
 
 function countdown() {		
+	compOutcomeText.innerHTML = ""
+	gameOutcomeText.innerHTML = ""
+	
 	countdownText.classList.remove('animated', 'heartBeat', 'countdown-end')
 	countdownText.classList.add('animated', 'zoomInDown', 'countdown-start')
 	countdownText.innerHTML = "Ready?"
@@ -53,7 +54,6 @@ function countdown() {
 	countdownText.addEventListener('animationiteration', function() {
 		countdownText.innerHTML = `${event.elapsedTime}`
 	})
-	
 }
 
 function generateHandsign() {

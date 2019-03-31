@@ -29,6 +29,21 @@ function gameListeners() {
 	})	
 }
 
+function game(userPlayer) {
+	countdown()
+	
+	countdownText.addEventListener('animationend', function() {
+		countdownText.classList.remove('animated', 'zoomInDown', 'countdown-start')
+		countdownText.classList.add('animated', 'heartBeat', 'countdown-end')
+		countdownText.innerHTML = 'FIGHT!'
+	})	
+	
+	setTimeout(function() {
+		let compPlayer = generateHandsign()
+		
+		checkWinner(userPlayer, compPlayer)
+	}, 5000)
+}
 
 function countdown() {		
 	countdownText.classList.remove('animated', 'heartBeat', 'countdown-end')
@@ -39,20 +54,6 @@ function countdown() {
 		countdownText.innerHTML = `${event.elapsedTime}`
 	})
 	
-}
-
-function game(userPlayer) {
-	countdown()
-	
-	countdownText.addEventListener('animationend', function() {
-		countdownText.classList.remove('animated', 'zoomInDown', 'countdown-start')
-		countdownText.classList.add('animated', 'heartBeat', 'countdown-end')
-		countdownText.innerHTML = 'FIGHT!'
-	
-		let compPlayer = generateHandsign()
-		
-		checkWinner(userPlayer, compPlayer)
-	})	
 }
 
 function generateHandsign() {

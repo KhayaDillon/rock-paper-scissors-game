@@ -43,6 +43,8 @@ function game(userPlayer) {
 	}, 5000)
 }
 
+// countdown with paper is still wonky for some reason
+
 function countdown() {		
 	compOutcomeText.innerHTML = ""
 	gameOutcomeText.innerHTML = ""

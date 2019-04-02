@@ -35,6 +35,8 @@ div {
 .handsign {
 	margin: 20px;
 	cursor: pointer;
+	width: 300px;
+	padding: 30px 40px;
 }
 
 #outcomes h3 {

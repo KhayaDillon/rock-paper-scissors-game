@@ -33,10 +33,24 @@ div {
 }
 
 .handsign {
-	margin: 20px;
 	cursor: pointer;
-	width: 300px;
-	padding: 30px 40px;
+	width: 300px
+}
+
+#handsigns div {
+	position: relative;
+	width: 350px;
+	margin: 30px 45px;
+	display: inline-block;
+}
+
+#handsigns span {
+	font-family: 'Permanent Marker', cursive;
+	word-break: break-all;
+	font-size: 2em;
+	position: absolute;
+	right: 1em;
+	top: 0px
 }
 
 #outcomes h3 {

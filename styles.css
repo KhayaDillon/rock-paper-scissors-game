@@ -34,6 +34,7 @@ div {
 
 .handsign {
 	margin: 20px;
+	cursor: pointer;
 }
 
 #outcomes h3 {
@@ -62,7 +63,7 @@ div {
 table {
 	border: 3px solid black;
 	width: 200px;
-	margin: 20px auto;
+	margin: 40px auto;
 	text-align: center;
 	border-collapse: collapse;
 	background-color: white;
@@ -70,4 +71,5 @@ table {
 
 th, td {
 	border: 3px solid black;
+	padding: 10px;
 }

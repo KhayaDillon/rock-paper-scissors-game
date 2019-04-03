@@ -84,6 +84,8 @@ function checkWinner(userPlayer, compPlayer) {
 			lose(userPlayer, compPlayer);
 			break;
 	}	
+	
+	location.href = "#handsigns"
 }
 
 function tie() {

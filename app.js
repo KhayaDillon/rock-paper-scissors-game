@@ -2,6 +2,9 @@
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
+const rockHeader = document.querySelector("#rock span")	
+const paperHeader = document.querySelector("#paper span")
+const scissorsHeader = document.querySelector("#rock span")		
 const countdownText = document.getElementById("countdown-text")
 const compOutcomeText = document.getElementById("comp-outcome-text")
 const gameOutcomeText = document.getElementById("game-outcome-text")
@@ -15,14 +18,17 @@ gameListeners()
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
+		rockHeader.classList.add('selected')
 		game("rock")
 	})
 	
 	paper.addEventListener("click", function() {
+		paperHeader.classList.add('selected')
 		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
+		scissorsHeader.classList.add('selected')
 		game("scissors")
 	})	
 }
@@ -42,8 +48,6 @@ function game(userPlayer) {
 		checkWinner(userPlayer, compPlayer)
 	}, 5000)
 }
-
-// countdown with paper is still wonky for some reason
 
 function countdown() {		
 	compOutcomeText.innerHTML = ""
@@ -86,6 +90,7 @@ function checkWinner(userPlayer, compPlayer) {
 	}	
 	
 	location.href = "#handsigns"
+	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
 }
 
 function tie() {

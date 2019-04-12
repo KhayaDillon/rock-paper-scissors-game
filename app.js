@@ -1,10 +1,7 @@
 
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
-const scissors = document.getElementById("scissors")
-const rockHeader = document.querySelector("#rock span")	
-const paperHeader = document.querySelector("#paper span")
-const scissorsHeader = document.querySelector("#scissors span")		
+const scissors = document.getElementById("scissors")	
 const countdownText = document.getElementById("countdown-text")
 const compOutcomeText = document.getElementById("comp-outcome-text")
 const gameOutcomeText = document.getElementById("game-outcome-text")
@@ -18,17 +15,17 @@ gameListeners()
 
 function gameListeners() {
 	rock.addEventListener("click", function() {
-		rockHeader.classList.add('selected')
+		rock.classList.add('selected')
 		game("rock")
 	})
 	
 	paper.addEventListener("click", function() {
-		paperHeader.classList.add('selected')
+		paper.classList.add('selected')
 		game("paper")
 	})
 	
 	scissors.addEventListener("click", function() {
-		scissorsHeader.classList.add('selected')
+		scissors.classList.add('selected')
 		game("scissors")
 	})	
 }

@@ -1,6 +1,9 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
+
+/* General Styles */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +13,12 @@ body {
 	background-color: #CE0303;
 }
 
+div {
+	text-align: center;
+}
+
+/* Header */
+
 #logo {
 	width: 80px; 
 	margin: 0 auto;
@@ -18,6 +27,7 @@ body {
 header {
 	padding: 20px;
 	background-color: white;
+	border-bottom: 15px double black;
 }
 
 header h1 {
@@ -28,9 +38,7 @@ header h1 {
 	font-size: 3.5em;
 }
 
-div {
-	text-align: center;
-}
+/* Battle Ground */
 
 .handsign {
 	cursor: pointer;
@@ -44,6 +52,10 @@ div {
 	display: inline-block;
 	/* word-break: break-word; */
 	background: maroon;
+}
+
+#handsigns div:hover {
+	box-shadow: 0px 0px 40px white, 0px 0px 50px orange;
 }
 
 #handsigns span {
@@ -65,16 +77,15 @@ div {
 }
 
 .selected {
+	box-shadow: 0px 0px 40px white;
 	color: white;
 	animation: glow 4s linear infinite alternative;
-	-webkit-animation: glow 1s linear infinite alternate;
-    -moz-animation: glow 1s linear infinite alternate;
 }
 
 @keyframes glow {
-	0% {text-shadow: 0px 0px 5px white, 0px 0px 7px yellow, 0px 0px 12px orange;}
-	50% {text-shadow: 0px 0px 8px white, 0px 0px 10px yellow, 0px 0px 15px orange;}
-	100% {text-shadow: 0px 0px 15px white, 0px 0px 17px yellow, 0px 0px 23px orange;}
+	0% {text-shadow: 0px 0px 5px white, 0px 0px 7px orange, 0px 0px 12px darkorange;}
+	50% {text-shadow: 0px 0px 8px white, 0px 0px 13px orange, 0px 0px 18px darkorange;}
+	100% {text-shadow: 0px 0px 15px white, 0px 0px 25px orange, 0px 0px 40px darkorange;}
 }
 
 #outcomes h3 {
@@ -85,32 +96,36 @@ div {
 
 .countdown-start {
 	padding: 35px;
-	font-size: 2.5em;
+	font-size: 3em;
 	color: white;
 	animation-duration: 2s;
 	animation-iteration-count: 4;
+	font-family: 'Permanent Marker', cursive;
 }
 
 .countdown-end {
 	font-family: 'Permanent Marker', cursive;
 	padding: 25px;
-	font-size: 3em;
+	font-size: 3.5em;
 	color: white;
 }
 
 table {
-	border: 3px solid black;
-	width: 200px;
+	border: 5px solid black;
+	width: 300px;
 	margin: 40px auto;
 	text-align: center;
 	border-collapse: collapse;
 	background-color: white;
+	table-layout: fixed;
 }
 
 th, td {
-	border: 3px solid black;
+	border: 5px solid black;
 	padding: 10px;
 }
+
+/* Footer */
 
 footer div {
 	padding: 2em;

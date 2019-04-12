@@ -31,13 +31,9 @@ function gameListeners() {
 }
 
 function game(userPlayer) {
+	$('#handsigns div').each((index, ele) => $(ele).off("click"))
+	
 	countdown()
-
-	countdownText.addEventListener('animationend', function() {
-		countdownText.classList.remove('zoomInDown', 'countdown-start')
-		countdownText.classList.add('heartBeat', 'countdown-end')
-		countdownText.innerHTML = 'FIGHT!'
-	})	
 	
 	setTimeout(function() {
 		let compPlayer = generateHandsign()
@@ -61,6 +57,12 @@ function countdown() {
 	countdownText.addEventListener('animationiteration', function() {
 		countdownText.innerHTML = `${event.elapsedTime}`
 	})
+	
+	countdownText.addEventListener('animationend', function() {
+		countdownText.classList.remove('zoomInDown', 'countdown-start')
+		countdownText.classList.add('heartBeat', 'countdown-end')
+		countdownText.innerHTML = 'FIGHT!'
+	})	
 }
 
 function generateHandsign() {
@@ -114,5 +116,6 @@ function attackVerb(winner) {
 function endGame() {
 	location.href = "#handsigns"
 	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
+	$('#handsigns div').each((index, ele) => $(ele).on("click"))
 	
 }

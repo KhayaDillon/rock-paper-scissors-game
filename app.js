@@ -14,25 +14,25 @@ let compScore = 0
 gameListeners()
 
 function gameListeners() {
-	rock.addEventListener("click", function() {
+	$("#rock").click(function() {
 		rock.classList.add('selected')
 		game("rock")
 	})
 	
-	paper.addEventListener("click", function() {
+	$("#paper").click(function() {
 		paper.classList.add('selected')
 		game("paper")
 	})
 	
-	scissors.addEventListener("click", function() {
+	$("#scissors").click(function() {
 		scissors.classList.add('selected')
 		game("scissors")
-	})	
+	})		
 }
 
 function game(userPlayer) {
 	countdown()
-	
+
 	countdownText.addEventListener('animationend', function() {
 		countdownText.classList.remove('zoomInDown', 'countdown-start')
 		countdownText.classList.add('heartBeat', 'countdown-end')
@@ -43,8 +43,12 @@ function game(userPlayer) {
 		let compPlayer = generateHandsign()
 		
 		checkWinner(userPlayer, compPlayer)
+		
+		endGame()
 	}, 5000)
 }
+
+
 
 function countdown() {		
 	compOutcomeText.innerHTML = ""
@@ -85,9 +89,6 @@ function checkWinner(userPlayer, compPlayer) {
 			lose(userPlayer, compPlayer);
 			break;
 	}	
-	
-	location.href = "#handsigns"
-	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
 }
 
 function tie() {
@@ -108,4 +109,10 @@ function lose(userHandsign, compHandsign) {
 
 function attackVerb(winner) {
 	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cut"
+}
+
+function endGame() {
+	location.href = "#handsigns"
+	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
+	
 }

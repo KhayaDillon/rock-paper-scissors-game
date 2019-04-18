@@ -40,7 +40,7 @@ function game(userPlayer) {
 		
 		checkWinner(userPlayer, compPlayer)
 		
-		endGame()
+		cleanUp()
 	}, 5000)
 }
 
@@ -113,9 +113,9 @@ function attackVerb(winner) {
 	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cut"
 }
 
-function endGame() {
+function cleanUp() {
 	location.href = "#handsigns"
 	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
-	$('#handsigns div').each((index, ele) => $(ele).on("click", gameListeners))
+	gameListeners()
 	
 }

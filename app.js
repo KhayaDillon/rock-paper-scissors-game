@@ -116,6 +116,6 @@ function attackVerb(winner) {
 function endGame() {
 	location.href = "#handsigns"
 	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
-	$('#handsigns div').each((index, ele) => $(ele).on("click"))
+	$('#handsigns div').each((index, ele) => $(ele).on("click", gameListeners()))
 	
 }

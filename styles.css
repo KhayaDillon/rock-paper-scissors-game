@@ -34,8 +34,8 @@ header h1 {
 	margin: 0;
 	text-align: center;
 	color: black;
-	font-family: 'Chinese Style';
-	font-size: 3.8em;
+	font-family: 'Chinese Style', Impact, sans-serif;
+	font-size: 4em;
 	padding-bottom: 20px;
 }
 
@@ -93,8 +93,10 @@ header h1 {
 
 #outcomes h3 {
 	color: white;
-	font-family: 'Permanent Marker', cursive;
-	font-size: 1.8em;
+	font-family: "Arial Black", sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-bottom: 10px;
 }
 
 .countdown-start {
@@ -103,14 +105,15 @@ header h1 {
 	color: white;
 	animation-duration: 2s;
 	animation-iteration-count: 4;
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Arial Black", sans-serif;
 }
 
 .countdown-end {
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Arial Black", sans-serif;
 	padding: 25px;
-	font-size: 3.5em;
+	font-size: 3em;
 	color: white;
+	font-weight: bold;
 }
 
 table {
@@ -137,10 +140,17 @@ td {
 
 footer div {
 	padding: 2em;
+	font-family: Arial, sans-serif;
 }
 
 footer h3 {
 	padding-bottom: 10px;
+	font-size: 1.3em;
+	font-family: "Arial Black", sans-serif;
+}
+
+footer p {
+	font-size: 1.1em;
 }
 
 #about {

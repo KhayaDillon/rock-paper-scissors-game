@@ -176,3 +176,15 @@ footer p {
 #project {
 	color: white;
 }
+
+.footer-column {
+	float: left; 
+	width: 23%; 
+	padding: 10px 10px 50px 10px; 
+}
+
+footer h4 {
+	padding-bottom: 10px;
+}
+
+

@@ -165,12 +165,16 @@ footer p {
 }
 
 #about a {
-	background-color: maroon;
-	border-radius: 10px;
+	background-color: #CE0303;
+	border-radius: 15px;
 	padding: 7px 10px;
 	color: white;
-	font-size: 1em;
+	font-size: 0.9em;
+	width: 150px;
+	display: block;
+	margin: 0px auto 20px auto;
 	text-decoration: none;
+	font-family: "Arial Black", sans-serif;
 }
 
 #project {

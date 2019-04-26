@@ -19,15 +19,15 @@ div {
 
 /* Header */
 
-#logo {
-	width: 80px; 
-	margin: 0 auto;
-}
-
 header {
 	padding: 20px;
 	background-color: white;
 	border-bottom: 15px double black;
+}
+
+#logo {
+	width: 80px; 
+	margin: 0 auto;
 }
 
 header h1 {
@@ -41,8 +41,21 @@ header h1 {
 
 /* Battle Ground */
 
-.handsign {
-	width: 300px
+#countdown-text {
+	font-family: "Arial Black", sans-serif;
+	font-size: 3em;
+	padding: 25px;
+	color: white;
+	
+}
+
+.countdown-start {
+	animation-duration: 2s;
+	animation-iteration-count: 4;
+}
+
+.countdown-end {
+	font-weight: bold;
 }
 
 #handsigns div {
@@ -57,6 +70,10 @@ header h1 {
 #handsigns div:hover {
 	box-shadow: 0px 0px 40px white, 0px 0px 60px orange, 0px 0px 80px red;
 	cursor: pointer;
+}
+
+.handsign {
+	width: 300px
 }
 
 #handsigns span {
@@ -99,23 +116,6 @@ header h1 {
 	padding-bottom: 12px;
 }
 
-.countdown-start {
-	padding: 35px;
-	font-size: 3em;
-	color: white;
-	animation-duration: 2s;
-	animation-iteration-count: 4;
-	font-family: "Arial Black", sans-serif;
-}
-
-.countdown-end {
-	font-family: "Arial Black", sans-serif;
-	padding: 25px;
-	font-size: 3em;
-	color: white;
-	font-weight: bold;
-}
-
 table {
 	border: 5px solid black;
 	width: 320px;
@@ -155,16 +155,16 @@ footer p {
 	line-height: 1.3em;
 }
 
-#about {
+#about-section {
 	background-color: white;
 	border-top: 15px double black;
 }
 
-#about p {
+#about-section p {
 	padding-bottom: 1.5em;
 }
 
-#about a {
+.button {
 	background-color: #CE0303;
 	border-radius: 15px;
 	padding: 7px 10px;
@@ -177,14 +177,14 @@ footer p {
 	font-family: "Arial Black", sans-serif;
 }
 
-#project {
+#project-section {
 	color: white;
 }
 
 .footer-column {
 	float: left; 
 	width: 23%; 
-	padding: 10px 13px 50px 10px; 
+	padding: 30px 0px 60px 30px; 
 	text-align: left;
 }
 
@@ -196,4 +196,7 @@ footer h4 {
 	padding-bottom: 15px;
 }
 
+footer a {
+	color: white;
+}
 

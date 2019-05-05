@@ -4,10 +4,7 @@ const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")	
  */
-
 const countdownText = document.getElementById("countdown-text")
-const userScoreData = document.getElementById("user-score-data")
-const compScoreData = document.getElementById("comp-score-data")
 
 let userScore = 0 
 let compScore = 0
@@ -98,13 +95,13 @@ function tie() {
 
 function win(userHandsign, compHandsign) {
 	userScore++
-	userScoreData.innerHTML = userScore
+	$("#user-score-data").text(userScore)
 	$("#game-outcome-text").text(`${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase())
 }
 
 function lose(userHandsign, compHandsign) {
 	compScore++
-	compScoreData.innerHTML = compScore
+	$("#comp-score-data").text(compScore)
 	$("#game-outcome-text").text(`${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase())
 }
 

@@ -14,16 +14,22 @@ gameListeners()
 function gameListeners() {
 	$("#rock").click(function() {
 		rock.classList.add('selected')
+		document.querySelector("html").classList.add('rock-handsign')
+		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
 		game("rock")
 	})
 	
 	$("#paper").click(function() {
 		paper.classList.add('selected')
+		document.querySelector("html").classList.add('paper-handsign')
+		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
 		game("paper")
 	})
 	
 	$("#scissors").click(function() {
 		scissors.classList.add('selected')
+		document.querySelector("html").classList.add('scissors-handsign')
+		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
 		game("scissors")
 	})		
 }

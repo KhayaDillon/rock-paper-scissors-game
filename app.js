@@ -1,10 +1,11 @@
 
+/*
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")	
+ */
+
 const countdownText = document.getElementById("countdown-text")
-const compOutcomeText = document.getElementById("comp-outcome-text")
-const gameOutcomeText = document.getElementById("game-outcome-text")
 const userScoreData = document.getElementById("user-score-data")
 const compScoreData = document.getElementById("comp-score-data")
 
@@ -44,11 +45,9 @@ function game(userPlayer) {
 	}, 5000)
 }
 
-
-
 function countdown() {		
-	compOutcomeText.innerHTML = ""
-	gameOutcomeText.innerHTML = ""
+	$("#comp-outcome-text").text("")
+	$("#game-outcome-text").text("")
 	
 	countdownText.classList.remove('heartBeat', 'countdown-end')
 	countdownText.classList.add('animated', 'zoomInDown', 'countdown-start')
@@ -69,7 +68,7 @@ function generateHandsign() {
 	const handsigns = ["rock", "paper", "scissors"]
 	let randomIndex = Math.floor(Math.random() * 3)
 	
-	compOutcomeText.innerHTML = `Computer Player chose ${handsigns[randomIndex]}.`.toUpperCase()
+	$("#comp-outcome-text").text(`Computer Player chose ${handsigns[randomIndex]}.`.toUpperCase())
 	return handsigns[randomIndex]
 }
 
@@ -94,19 +93,19 @@ function checkWinner(userPlayer, compPlayer) {
 }
 
 function tie() {
-	gameOutcomeText.innerHTML = "It's a tie!".toUpperCase()
+	$("#game-outcome-text").text("It's a tie!".toUpperCase())
 }
 
 function win(userHandsign, compHandsign) {
 	userScore++
 	userScoreData.innerHTML = userScore
-	gameOutcomeText.innerHTML = `${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase()
+	$("#game-outcome-text").text(`${userHandsign} ${attackVerb(userHandsign)} ${compHandsign}. You win!!`.toUpperCase())
 }
 
 function lose(userHandsign, compHandsign) {
 	compScore++
 	compScoreData.innerHTML = compScore
-	gameOutcomeText.innerHTML = `${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase()
+	$("#game-outcome-text").text(`${compHandsign} ${attackVerb(compHandsign)} ${userHandsign}. You lose...`.toUpperCase())
 }
 
 function attackVerb(winner) {

@@ -188,13 +188,14 @@ footer p {
 	text-align: left;
 }
 
+footer h4 {
+	padding-bottom: 15px;
+}
+
 .footer-column p, .footer-column ul {
 	font-size: 0.9em;
 }
 
-footer h4 {
-	padding-bottom: 15px;
-}
 
 footer a {
 	color: white;

@@ -36,13 +36,14 @@ function game(userPlayer, div) {
 		
 		checkWinner(userPlayer, compPlayer)
 		
-		cleanUp()
+		cleanUp(userPlayer, div)
 	}, 5000)
 }
 
 function selectMove(move, div) {
 	$(div).addClass('selected')
-	document.querySelector("html").classList.add(`${move}-handsign`)
+	$(div).css("background-image", "linear-gradient(#350000, maroon, white)")
+	$("html").addClass(`${move}-handsign`)
 	$("#handsigns div").each((index, ele) => $(ele).off("click"))
 }
 
@@ -113,8 +114,10 @@ function attackVerb(winner) {
 	return winner === "rock" ? "smashes" : winner === "paper" ? "covers" : "cut"
 }
 
-function cleanUp() {
+function cleanUp(move, div) {
 	location.href = "#handsigns"
-	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
+	$(div).removeClass("selected")
+	$("html").removeClass(`${move}-handsign`)
+	$(div).css("background-image", "")
 	gameListeners()
 }

@@ -9,33 +9,35 @@ const countdownText = document.getElementById("countdown-text")
 let userScore = 0 
 let compScore = 0
 
+hover()
+
 gameListeners()
+
+function hover() {
+	$("#handsigns div").hover(function() {
+		$(this).addClass('hover')	
+	}, 
+	function() {
+		$(this).removeClass('hover')
+	})
+}
 
 function gameListeners() {
 	$("#rock").click(function() {
-		rock.classList.add('selected')
-		document.querySelector("html").classList.add('rock-handsign')
-		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
-		game("rock")
+		game("rock", this)
 	})
 	
 	$("#paper").click(function() {
-		paper.classList.add('selected')
-		document.querySelector("html").classList.add('paper-handsign')
-		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
-		game("paper")
+		game("paper", this)
 	})
 	
 	$("#scissors").click(function() {
-		scissors.classList.add('selected')
-		document.querySelector("html").classList.add('scissors-handsign')
-		document.querySelector("#handsigns div:hover").classList.add('rock-handsign')
-		game("scissors")
+		game("scissors", this)
 	})		
 }
 
-function game(userPlayer) {
-	$('#handsigns div').each((index, ele) => $(ele).off("click"))
+function game(userPlayer, div) {
+	selectMove(userPlayer, div)
 	
 	countdown()
 	
@@ -46,6 +48,13 @@ function game(userPlayer) {
 		
 		cleanUp()
 	}, 5000)
+}
+
+function selectMove(move, div) {
+	$('#handsigns div').each((index, ele) => $(ele).off("click"))
+	$(div).addClass('selected')
+	document.querySelector("html").classList.add(`${move}-handsign`)
+	$(div).removeClass('hover')
 }
 
 function countdown() {		

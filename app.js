@@ -1,14 +1,8 @@
 
-/*
-const rock = document.getElementById("rock")
-const paper = document.getElementById("paper")
-const scissors = document.getElementById("scissors")	
- */
 const countdownText = document.getElementById("countdown-text")
 
 let userScore = 0 
 let compScore = 0
-
 
 gameListeners()
 

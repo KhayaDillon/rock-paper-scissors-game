@@ -9,18 +9,8 @@ const countdownText = document.getElementById("countdown-text")
 let userScore = 0 
 let compScore = 0
 
-hover()
 
 gameListeners()
-
-function hover() {
-	$("#handsigns div").hover(function() {
-		$(this).addClass('hover')	
-	}, 
-	function() {
-		$(this).removeClass('hover')
-	})
-}
 
 function gameListeners() {
 	$("#rock").click(function() {
@@ -51,10 +41,9 @@ function game(userPlayer, div) {
 }
 
 function selectMove(move, div) {
-	$('#handsigns div').each((index, ele) => $(ele).off("click"))
 	$(div).addClass('selected')
 	document.querySelector("html").classList.add(`${move}-handsign`)
-	$(div).removeClass('hover')
+	$("#handsigns div").each((index, ele) => $(ele).off("click"))
 }
 
 function countdown() {		
@@ -128,5 +117,4 @@ function cleanUp() {
 	location.href = "#handsigns"
 	document.querySelectorAll('.selected').forEach(ele => ele.classList.remove('selected'))
 	gameListeners()
-	
 }

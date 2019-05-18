@@ -18,6 +18,14 @@ div {
 	text-align: center;
 }
 
+a {
+	color: white;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
 /* Header */
 
 header {
@@ -170,7 +178,6 @@ footer h3 {
 footer p {
 	font-size: 1em;
 	margin-bottom: 10px;
-	line-height: 1.3em;
 	text-align: left;
 }
 
@@ -179,6 +186,7 @@ footer p {
 	border-top: 15px double black;
 	padding-left: 400px;
 	padding-right: 400px;
+	line-height: 1.4em;
 }
 
 #about-section p {
@@ -199,8 +207,13 @@ footer p {
 	font-family: "Arial Black", sans-serif;
 }
 
+.button:hover {
+	background-color: #9B0202;
+}
+
 #project-section {
 	color: white;
+	line-height: 1.3em;
 }
 
 .footer-column {
@@ -216,10 +229,5 @@ footer h4 {
 
 .footer-column p, .footer-column ul {
 	font-size: 0.9em;
-}
-
-
-footer a {
-	color: white;
 }
 

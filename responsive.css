@@ -1,7 +1,25 @@
 @charset "utf-8";
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1460px) {
 	
+
+
   
-  
+}
+
+@media only screen and (max-width: 1390px) {
+	
+#handsigns-div div {
+	height: 300px;
+}
+
+}
+
+@media only screen and (max-width: 1140px) {
+	
+#handsigns-div div {
+	width: 21%;
+	height: 250px;
+}
+
 }

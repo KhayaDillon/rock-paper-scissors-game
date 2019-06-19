@@ -72,6 +72,7 @@ header h1 {
 #handsigns-div div {
 	position: relative;
 	width: 23%;
+	height: 341px;
 	margin: 20px 45px;
 	display: inline-block;
 	/* word-break: break-word; */

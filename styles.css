@@ -69,20 +69,21 @@ header h1 {
 	font-weight: bold;
 }
 
-#handsigns div {
+#handsigns-div div {
 	position: relative;
-	width: 350px;
+	width: 23%;
 	margin: 20px 45px;
 	display: inline-block;
 	/* word-break: break-word; */
 	background-image: linear-gradient(#350000, maroon, darkred)
 }
 
-.handsign {
-	width: 300px
+.handsign-img {
+	width: 85%;
+	height: 100%;
 }
 
-#handsigns span {
+#handsigns-div span {
 	font-family: 'Chinese Style';
 	position: absolute;
 	line-height: 1em;
@@ -90,17 +91,17 @@ header h1 {
 	background-color: white;
 }
 
-#rock span, #paper span {
+#rock-div span, #paper-div span {
 	font-size: 2.5em;
 	right: 1.2em;
 }
 
-#scissors span {
+#scissors-div span {
 	font-size: 2.3em;
 	left: 1.5em;
 }
 
-#handsigns div:hover {
+#handsigns-div div:hover {
 	box-shadow: 0px 0px 40px white, 0px 0px 60px orange, 0px 0px 80px red;
 }
 

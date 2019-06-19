@@ -7,15 +7,15 @@ let compScore = 0
 gameListeners()
 
 function gameListeners() {
-	$("#rock").click(function() {
+	$("#rock-div").click(function() {
 		game("rock", this)
 	})
 	
-	$("#paper").click(function() {
+	$("#paper-div").click(function() {
 		game("paper", this)
 	})
 	
-	$("#scissors").click(function() {
+	$("#scissors-div").click(function() {
 		game("scissors", this)
 	})		
 }
@@ -109,7 +109,7 @@ function attackVerb(winner) {
 }
 
 function cleanUp(move, div) {
-	location.href = "#handsigns"
+	location.href = "#handsigns-div"
 	$(div).removeClass("selected")
 	$("html").removeClass(`${move}-handsign`)
 	$(div).css("background-image", "")

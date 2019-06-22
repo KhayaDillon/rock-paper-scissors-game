@@ -1,11 +1,6 @@
 @charset "utf-8";
 
-@media only screen and (max-width: 1460px) {
-	
 
-
-  
-}
 
 @media only screen and (max-width: 1390px) {
 	
@@ -20,6 +15,26 @@
 #handsigns-div div {
 	width: 21%;
 	height: 250px;
+}
+
+#rock-div span, #paper-div span {
+	font-size: 2em;
+}
+
+#scissors-div span {
+	font-size: 1.8em;
+}
+
+}
+
+@media only screen and (max-width: 1000px) {
+	
+#logo {
+	width: 120px;
+}
+
+header h1 {
+	font-size: 7em;
 }
 
 }

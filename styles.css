@@ -187,13 +187,12 @@ footer p {
 #about-section {
 	background-color: white;
 	border-top: 15px double black;
-	padding-left: 400px;
-	padding-right: 400px;
 	line-height: 1.4em;
 }
 
 #about-section p {
-	padding-bottom: 1.5em;
+	text-align: justify;
+	padding: 0px 20% 1.5em 20%;
 }
 
 .button {

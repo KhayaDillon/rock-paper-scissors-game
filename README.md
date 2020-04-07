@@ -9,4 +9,4 @@ countdown sequence, text glow animations, a scoreboard that displays the user's 
 Clone repo and open the index.html in the browser, preferably Google Chrome. 
 
 
-![alt text](http://i67.tinypic.com/2qnrsk3.png)
+![alt text](https://i.imgur.com/f4pQSH7.png)
